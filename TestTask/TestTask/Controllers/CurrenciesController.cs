@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Sitecore.FakeDb;
+using System;
+using System.Collections.Generic;
 using System.Web.Http;
 using System.Windows.Forms;
+using XAct.Library.Settings;
 
 namespace TestTask.Controllers
 {
@@ -11,6 +14,7 @@ namespace TestTask.Controllers
     }
     public class CurrenciesController : ApiController
     {
+        DB dB = new DB("Task");
 
         public List<Currency> lst = new List<Currency>()
         {
@@ -31,8 +35,8 @@ namespace TestTask.Controllers
 
         public IEnumerable<Currency> Currencies()
         {
-            
 
+            MessageBox.Show(dB.GetConnection().ToString());
             return lst;
         }
 

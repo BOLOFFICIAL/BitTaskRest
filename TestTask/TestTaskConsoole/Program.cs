@@ -10,7 +10,7 @@ internal class Program
         List<Currency> currencies = JsonConvert.DeserializeObject<List<Currency>>(res);
         foreach (var el in currencies)
         {
-            Console.WriteLine(el.Name);
+            Console.WriteLine(el.Name+"\t"+el.Id);
         }
     }
 

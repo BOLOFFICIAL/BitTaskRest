@@ -68,3 +68,17 @@ C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\obj\Debug\TestTask.cs
 C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\obj\Debug\TestTask.csproj.CopyComplete
 C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\obj\Debug\TestTask.dll
 C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\obj\Debug\TestTask.pdb
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\EntityFramework.dll
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\EntityFramework.SqlServer.dll
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\Sitecore.FakeDb.dll
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\System.Data.SQLite.dll
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\System.Data.SQLite.EF6.dll
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\System.Data.SQLite.Linq.dll
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\XAct.Core.PCL.dll
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\EntityFramework.xml
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\EntityFramework.SqlServer.xml
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\Sitecore.FakeDb.xml
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTask\bin\System.Data.SQLite.xml
