@@ -7,9 +7,7 @@ internal class Program
         string res = GetString("https://localhost:44315/Currencies");
 
         Console.WriteLine(res);
-
         List<Currency> currencies = JsonConvert.DeserializeObject<List<Currency>>(res);
-
         foreach (var el in currencies)
         {
             Console.WriteLine(el.Name);
