@@ -1,0 +1,17 @@
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\bin\Debug\net7.0\TestTaskConsoole.exe
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\bin\Debug\net7.0\TestTaskConsoole.deps.json
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\bin\Debug\net7.0\TestTaskConsoole.runtimeconfig.json
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\bin\Debug\net7.0\TestTaskConsoole.dll
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\bin\Debug\net7.0\TestTaskConsoole.pdb
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\obj\Debug\net7.0\TestTaskConsoole.csproj.AssemblyReference.cache
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\obj\Debug\net7.0\TestTaskConsoole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\obj\Debug\net7.0\TestTaskConsoole.AssemblyInfoInputs.cache
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\obj\Debug\net7.0\TestTaskConsoole.AssemblyInfo.cs
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\obj\Debug\net7.0\TestTaskConsoole.csproj.CoreCompileInputs.cache
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\obj\Debug\net7.0\TestTaskConsoole.dll
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\obj\Debug\net7.0\refint\TestTaskConsoole.dll
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\obj\Debug\net7.0\TestTaskConsoole.pdb
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\obj\Debug\net7.0\TestTaskConsoole.genruntimeconfig.cache
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\obj\Debug\net7.0\ref\TestTaskConsoole.dll
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Bolofficial\Desktop\C_REST[205]\TestTask\TestTaskConsoole\obj\Debug\net7.0\TestTaskConsoole.csproj.CopyComplete
