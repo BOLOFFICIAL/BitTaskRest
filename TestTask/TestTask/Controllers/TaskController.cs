@@ -10,11 +10,6 @@ using XAct;
 
 namespace TestTask.Controllers
 {
-    public class Currency
-    {
-        public string Name { get; set; }
-        public int Id { get; set; }
-    }
     public class TaskController : ApiController
     {
         DB dB = new DB("Task");
@@ -28,39 +23,6 @@ namespace TestTask.Controllers
             adapter.Fill(dataTable);
             return dataTable;
         }
-        #region
-        public List<Currency> lst = new List<Currency>()
-        {
-            new Currency()
-            {
-                Name = "USD",
-                Id = 0
-            },
-
-            new Currency()
-            {
-                Name = "RUB",
-                Id = 1
-            },
-        };
-
-        [HttpGet, Route("Currencies")]
-        public IEnumerable<Currency> Currencies()
-        {
-
-            MessageBox.Show(dB.GetConnection().ToString());
-            return lst;
-        }
-
-        [HttpGet, Route("Currencies/{id}")]
-        public Currency Currency(int id)
-        {
-            Currency Cur = lst[id];
-
-            return Cur;
-        }
-
-        #endregion
 
         [HttpGet, Route("cities")]
         public IEnumerable<Cities> GetCities()
@@ -118,14 +80,13 @@ namespace TestTask.Controllers
         public IEnumerable<Houses> GetHousesCities(int city_id) 
         {
             string q = $"" +
-                $"SELECT c.name AS city, s.name AS street, h.number AS house_number, COUNT(a.id) AS num_apartments   " +
-                $"FROM Cities c " +
-                $"JOIN Streets s ON c.id = s.city_id" +
-                $"JOIN Houses h ON s.id = h.street_id" +
-                $"JOIN Apartments a ON h.id = a.house_id" +
-                $"WHERE c.id = {city_id}" +
-                $"GROUP BY c.name, s.name, h.number;";
-
+                $"SELECT Cities.name AS city_name, Streets.name AS street_name, Houses.number AS house_number, COUNT(Apartments.id) AS num_apartments     " +
+                $"FROM Cities     " +
+                $"JOIN Streets ON Cities.id = Streets.city_id    " +
+                $"JOIN Houses ON Streets.id = Houses.street_id   " +
+                $"JOIN Apartments ON Houses.id = Apartments.house_id    " +
+                $"WHERE Cities.id = {city_id}    " +
+                $"GROUP BY Cities.name, Streets.name, Houses.number;";
             return GetHouses(q);
         }
 
@@ -147,12 +108,12 @@ namespace TestTask.Controllers
         public IEnumerable<Houses> GetHousesFull(int city_id,int street_id) 
         {
             string q = $"" +
-                $"SELECT c.name AS city_name, s.name AS street_name, h.number AS house_number, COUNT(*) AS apartment_count " +
+                $"SELECT c.name AS city_name, s.name AS street_name, h.number AS house_number, COUNT(*) AS num_apartments " +
                 $"FROM Cities c " +
                 $"JOIN Streets s ON c.id = s.city_id " +
                 $"JOIN Houses h ON s.id = h.street_id " +
                 $"JOIN Apartments a ON h.id = a.house_id " +
-                $"WHERE c.id = 2 AND s.id = 2 " +
+                $"WHERE c.id = {city_id} AND s.id = {street_id} " +
                 $"GROUP BY c.name, s.name, h.number";
 
             return GetHouses(q);
@@ -167,32 +128,16 @@ namespace TestTask.Controllers
             foreach (DataRow row in dataTable.Rows)
             {
                 var city = (string)row["city_name"];
-                var street_name = (string)row["city_name"];
+                var street_name = (string)row["street_name"];
                 var house = new Houses
                 {
-                    id = (int)row["id"],
-                    name = (string)row["name"],
+                    name = (string)row["house_number"],
                     address = $"г.{city},ул.{street_name}",
-                    count = (int)row["num_houses"]
+                    count = (int)row["num_apartments"]
                 };
                 houses.Add(house);
             }
             return houses;
         }
-
-        #region
-        [HttpPost, Route("Currencies/new/{name}/{id}")]
-
-        public IHttpActionResult NewCurrency(string name, int id)
-        {
-            if (id == 1)
-            {
-                return BadRequest();
-            }
-            lst.Add(new Currency() { Name = name, Id = id });
-            string text = Request.Content.ReadAsStringAsync().Result;
-            return Ok();
-        }
-        #endregion
     }
 }

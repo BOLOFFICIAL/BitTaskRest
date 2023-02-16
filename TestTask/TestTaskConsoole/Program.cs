@@ -1,17 +1,46 @@
 ﻿using Newtonsoft.Json;
+using TestTask.Models;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        string res = GetString("https://localhost:44315/Currencies");
-
-        Console.WriteLine(res);
-        List<Currency> currencies = JsonConvert.DeserializeObject<List<Currency>>(res);
-        foreach (var el in currencies)
+        var data = GetHousesCities(1);
+        foreach (var el in data) 
         {
-            Console.WriteLine(el.Name+"\t"+el.Id);
+            Console.WriteLine(el);
         }
+    }
+
+    public static List<Cities> GetCities() 
+    {
+        string data = GetString("https://localhost:44315/cities");
+        List<Cities>? cities = JsonConvert.DeserializeObject<List<Cities>>(data);
+        return cities;
+    }
+    public static List<Streets> GetStreets(int city_id)
+    {
+        string data = GetString($"https://localhost:44315/cities/{city_id}/streets");
+        List<Streets>? streets = JsonConvert.DeserializeObject<List<Streets>>(data);
+        return streets;
+    }
+    public static List<Houses> GetHousesCities(int city_id)
+    {
+        string data = GetString($"https://localhost:44315/cities/{city_id}/houses");
+        List<Houses>? houses = JsonConvert.DeserializeObject<List<Houses>>(data);
+        return houses;
+    }
+    public static List<Houses> GetHousesStreets(int street_id)
+    {
+        string data = GetString($"https://localhost:44315/streets/{street_id}/houses");
+        List<Houses>? houses = JsonConvert.DeserializeObject<List<Houses>>(data);
+        return houses;
+    }
+    public static List<Houses> GetHousesFull(int city_id, int street_id)
+    {
+        string data = GetString($"https://localhost:44315/streets/{street_id}/houses");
+        List<Houses>? houses = JsonConvert.DeserializeObject<List<Houses>>(data);
+        return houses;
     }
 
     public static string GetString(string url)
@@ -30,10 +59,4 @@ internal class Program
         }
         return res;
     }
-}
-
-public class Currency
-{
-    public string Name { get; set; }
-    public int Id { get; set; }
 }
